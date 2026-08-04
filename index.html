@@ -3,91 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Title - Website Name</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Your Article Title Here</title>
+    <style>
+        /* Basic responsive layout and clean typography styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        article header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2; }
+        h2 { font-size: 1.8rem; margin-top: 35px; margin-bottom: 15px; }
+        h3 { font-size: 1.4rem; margin-top: 25px; margin-bottom: 10px; }
+        p { margin-bottom: 20px; font-size: 1.1rem; }
+        .meta-info { color: #666; font-size: 0.95rem; font-style: italic; }
+        blockquote {
+            margin: 30px 0;
+            padding-left: 20px;
+            border-left: 4px solid #0076ff;
+            font-style: italic;
+            color: #555;
+        }
+        ul, ol { margin-bottom: 20px; padding-left: 25px; }
+        li { margin-bottom: 8px; font-size: 1.1rem; }
+        figure { margin: 30px 0; text-align: center; }
+        figcaption { font-size: 0.85rem; color: #777; margin-top: 8px; }
+        img { max-width: 100%; height: auto; border-radius: 4px; }
+        footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
 
-    <!-- Global Navigation -->
-    <header class="site-header">
-        <div class="container">
-            <a href="#" class="logo">Publisher</a>
-            <nav class="main-nav">
-                <a href="#">Home</a>
-                <a href="#">Categories</a>
-                <a href="#">About</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="main-layout container">
-        <article class="article-core">
+    <!-- Semantic HTML5 Article Structure -->
+    <article>
+        
+        <header>
+            <!-- Article Main Title -->
+            <h1>Your Catchy Main Article Headline</h1>
             
-            <!-- Article Header Metadata -->
-            <header class="article-header">
-                <span class="category-tag">Technology</span>
-                <h1>The Future of Web Architecture and Design</h1>
-                <p class="article-lead">A deep dive into next-generation frameworks and how they impact user experiences across the modern web.</p>
-                
-                <div class="author-meta">
-                    <img src="author.jpg" alt="Author Name" class="author-avatar">
-                    <div class="meta-text">
-                        <span class="author-name">By Jane Doe</span>
-                        <time datetime="2026-08-04">August 4, 2026</time> • <span class="read-time">5 min read</span>
-                    </div>
-                </div>
-            </header>
+            <!-- Metadata: Author and Date -->
+            <div class="meta-info">
+                By <span>Author Name</span> | Published on <time datetime="2026-08-04">August 4, 2026</time>
+            </div>
+        </header>
 
-            <!-- Featured Image -->
-            <figure class="featured-image">
-                <img src="hero.jpg" alt="Abstract digital architecture concept">
-                <figcaption>Visual representation of interconnected data nodes.</figcaption>
+        <!-- Introduction Section -->
+        <section>
+            <p><strong>Hook your reader here.</strong> Start with an engaging introductory paragraph. This section sets the tone and introduces the core theme of your article to grab the reader's attention instantly.</p>
+            <p>Add a secondary introductory paragraph here if needed, establishing the background context before diving into the main subheadings.</p>
+        </section>
+
+        <!-- Main Body Section 1 -->
+        <section>
+            <h2>1. First Main Point Header</h2>
+            <p>Begin explaining your first main concept here. Divide long chunks of text into smaller paragraphs to make it scannable for web readers.</p>
+            
+            <blockquote>
+                "This is a blockquote placeholder. Use it to highlight an impactful quote, a critical statistic, or a key takeaway from your piece."
+            </blockquote>
+            
+            <p>Continue your point after the visual break of the quote. If you need a list, you can structure it like this:</p>
+            <ul>
+                <li>First supporting detail or bullet point resource.</li>
+                <li>Second key detail targeting this specific section.</li>
+                <li>Third relevant piece of data or example.</li>
+            </ul>
+        </section>
+
+        <!-- Main Body Section 2 -->
+        <section>
+            <h2>2. Second Main Point Header</h2>
+            <p>Introduce your next major idea here. To break up text visually, you can insert an image or graphic below using standard figure formatting.</p>
+            
+            <!-- Image Placeholder -->
+            <figure>
+                <img src="https://placeholder.com" alt="Describe the image content here for accessibility">
+                <figcaption>Figure 1: Provide a caption or photo credit attribution for your image.</figcaption>
             </figure>
+            
+            <h3>A Helpful Subsection Title</h3>
+            <p>Use lower-level headers like h3 tags to divide long steps, nested concepts, or distinct sequential phases inside a main point.</p>
+        </section>
 
-            <!-- Article Body Content -->
-            <div class="article-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Core layouts require structural integrity. Developers must balance speed, accessibility, and clean visual hierarchies to keep users engaged.</p>
-                
-                <h2>1. The Evolution of Core Layouts</h2>
-                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Content density matters. Short paragraphs keep readers moving down the page without experiencing mental fatigue.</p>
-                
-                <blockquote>
-                    "Good design is making something intelligible, great design is making something memorable."
-                </blockquote>
+        <!-- Conclusion Section -->
+        <section>
+            <h2>Conclusion</h2>
+            <p>Summarize the core takeaways of your article. Give your readers a final thought, a lingering question, or a direct call to action to finish strong.</p>
+        </section>
 
-                <h2>2. Maximising Reader Engagement</h2>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Visual anchors like pull-quotes and subheadings break up walls of text.</p>
-            </div>
+        <!-- Author Biography / Sign-off -->
+        <footer>
+            <p><strong>About the Author:</strong> Write a brief 1-2 sentence professional bio here to showcase your expertise or link back to your personal portfolio website.</p>
+        </footer>
 
-            <!-- Article Footer Tags & Share -->
-            <footer class="article-footer">
-                <div class="tags">
-                    <a href="#">#WebDev</a>
-                    <a href="#">#Design</a>
-                    <a href="#">#Coding</a>
-                </div>
-            </footer>
-
-        </article>
-
-        <!-- Sidebar for Secondary Content -->
-        <aside class="sidebar">
-            <div class="widget trending-widget">
-                <h3>Trending Articles</h3>
-                <ul>
-                    <li><a href="#">Mastering CSS Grid Layouts</a></li>
-                    <li><a href="#">Typography Rules for Digital Editors</a></li>
-                    <li><a href="#">Optimising Core Web Vitals</a></li>
-                </ul>
-            </div>
-        </aside>
-    </main>
-
-    <!-- Global Footer -->
-    <footer class="site-footer">
-        <p>&copy; 2026 Publisher Media. All rights reserved.</p>
-    </footer>
+    </article>
 
 </body>
 </html>
