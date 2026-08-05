@@ -3,46 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Article Layout</title>
+    <title>Article Blueprint & Code Tag Guide</title>
     <style>
-        /* CSS RESET & VARIABLES */
+        /* GLOBAL RESET & VARIABLES */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         :root {
-            --bg-color: #f9f9fb;
-            --text-color: #1a1a1a;
+            --bg-color: #f1f5f9;
+            --text-color: #0f172a;
             --accent-color: #2563eb;
             --card-bg: #ffffff;
-            --muted-text: #6b7280;
+            --muted-text: #64748b;
+            --border-color: #cbd5e1;
         }
 
-        /* TYPOGRAPHY & BASE STYLES */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.7;
             padding: 2rem 1rem;
         }
 
-        /* ARTICLE CONTAINER */
-        .article-container {
-            max-width: 720px;
+        .wrapper {
+            max-width: 800px;
             margin: 0 auto;
+        }
+
+        /* SECTION DIVIDERS */
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 1.5rem 0;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted-text);
+            position: relative;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 0.5rem auto 0 auto;
+        }
+
+        /* ==========================================
+           PART 1: THE LIVE EXAMPLE ARTICLE STYLES
+           ========================================== */
+        .article-container {
             background: var(--card-bg);
             padding: 3rem 2.5rem;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        }
-
-        /* HEADER & METADATA */
-        header {
-            margin-bottom: 2.5rem;
-            border-bottom: 2px solid #f3f4f6;
-            padding-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 4rem;
         }
         .category {
             text-transform: uppercase;
@@ -51,7 +69,7 @@
             color: var(--accent-color);
             letter-spacing: 0.05em;
         }
-        h1 {
+        h1.article-heading {
             font-size: 2.5rem;
             line-height: 1.2;
             margin: 0.5rem 0 1rem 0;
@@ -64,41 +82,66 @@
             gap: 1rem;
             font-size: 0.9rem;
             color: var(--muted-text);
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1.5rem;
         }
         .author-img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: #e5e7eb;
+            background: #cbd5e1;
         }
-
-        /* MAIN CONTENT STYLES */
         .article-body p {
             margin-bottom: 1.5rem;
             font-size: 1.125rem;
+            color: #334155;
         }
         .article-body h2 {
             font-size: 1.75rem;
             margin: 2.5rem 0 1rem 0;
             font-weight: 700;
         }
-        
-        /* PULL QUOTE */
         .pull-quote {
             border-left: 4px solid var(--accent-color);
             padding-left: 1.5rem;
             margin: 2rem 0;
             font-style: italic;
             font-size: 1.25rem;
-            color: #374151;
+            color: #475569;
         }
-
-        /* INTERACTIVE WIDGET (JAVASCRIPT DEPENDENT) */
+        .styled-list {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        .styled-list li {
+            margin-bottom: 0.5rem;
+        }
+        .article-image {
+            background: #e2e8f0;
+            border-radius: 8px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-text);
+            font-weight: 500;
+        }
+        .image-caption {
+            display: block;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+        }
         .interaction-box {
             margin-top: 3rem;
             padding: 1.5rem;
-            background: #f3f4f6;
+            background: #f8fafc;
             border-radius: 8px;
+            border: 1px solid #e2e8f0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -113,76 +156,124 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-        .like-btn:hover {
-            background: #1d4ed8;
+        .like-btn:hover { background: #1d4ed8; }
+
+        /* ==========================================
+           PART 2: THE REFERENCE GUIDE STYLES
+           ========================================== */
+        .guide-container {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .tag-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .tag-header {
+            background: #f8fafc;
+            padding: 0.6rem 1rem;
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--accent-color);
+        }
+        .tag-description {
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
+            background: #fff;
+            color: #475569;
         }
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 640px) {
             body { padding: 1rem 0.5rem; }
-            .article-container { padding: 2rem 1.25rem; border-radius: 0; }
-            h1 { font-size: 2rem; }
+            .article-container, .guide-container { padding: 1.5rem 1rem; border-radius: 8px; }
+            h1.article-heading { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <article class="article-container">
-        <!-- Article Header -->
-        <header>
-            <span class="category">Technology</span>
-            <h1>The Future of Web Development in a Single Page Layout</h1>
-            
-            <div class="meta-info">
-                <div class="author-img"></div>
-                <div>
-                    <strong>Alex Mercer</strong>
-                    <div style="font-size: 0.8rem;">Published Aug 5, 2026 • 5 min read</div>
+    <div class="wrapper">
+
+        <!-- VISUAL SECTION ANCHOR -->
+        <div class="section-title">1. Live Article Example</div>
+
+        <!-- ==========================================
+             THE LIVE EXAMPLE ARTICLE
+             ========================================== -->
+        <article class="article-container">
+            <header>
+                <span class="category">Technology</span>
+                <h1 class="article-heading">The Shift to Clean Digital Architecture</h1>
+                
+                <div class="meta-info">
+                    <div class="author-img"></div>
+                    <div>
+                        <strong>Alex Mercer</strong>
+                        <div style="font-size: 0.8rem;">Published Aug 5, 2026 • 3 min read</div>
+                    </div>
                 </div>
+            </header>
+
+            <div class="article-body">
+                <p>Writing clean, semantic HTML paired with native CSS layout options allows platforms to achieve elegant user presentations without loading massive framework assets.</p>
+                
+                <h2>Optimizing Performance Profiles</h2>
+                <p>By blending core structures directly inside a single document framework, we drastically reduce round-trip requests and optimize core web metrics, ensuring <strong>faster browser delivery times</strong>.</p>
+                
+                <figure>
+                    <div class="article-image">[ Mockup: Performance Chart Illustration ]</div>
+                    <figcaption class="image-caption">Figure 1: Client render execution latency comparison chart.</figcaption>
+                </figure>
+
+                <p>Engineers value single-file approaches for specific environments due to three key layout features:</p>
+                <ul class="styled-list">
+                    <li>Zero external file dependencies</li>
+                    <li>Guaranteed isolated style environments</li>
+                    <li>Highly predictable mobile layout scaling</li>
+                </ul>
+
+                <blockquote class="pull-quote">
+                    "Simplicity is the ultimate sophistication. When you minimize external file requests, you maximize target rendering speed."
+                </blockquote>
+
+                <p>Adding interactive script nodes directly at the footer block ensures your DOM renders <em>completely uninterrupted</em> by dynamic script processes.</p>
             </div>
-        </header>
 
-        <!-- Article Content -->
-        <div class="article-body">
-            <p>Writing clean, semantic HTML paired with modern CSS layout tools like Flexbox and Grid allows developers to achieve elegant presentation structures without massive frameworks.</p>
-            
-            <h2>Streamlining Content Delivery</h2>
-            <p>By blending structure, presentation, and small scales of dynamic interactivity directly into a solitary document, we drastically reduce round-trip server requests and enhance overall core web vitals performance markers.</p>
-            
-            <div class="pull-quote">
-                "Simplicity is the ultimate sophistication. When you minimize external assets, you maximize speed and accessibility."
+            <div class="interaction-box">
+                <span>Was this article example clear?</span>
+                <button class="like-btn" id="likeBtn">❤️ Like (<span id="likeCount">12</span>)</button>
+            </div>
+        </article>
+
+
+        <!-- VISUAL SECTION ANCHOR -->
+        <div class="section-title">2. Associated Code Blueprint Guide</div>
+
+        <!-- ==========================================
+             THE INTERACTIVE CODE REFERENCE GUIDE
+             ========================================== -->
+        <main class="guide-container">
+            <p style="margin-bottom: 1.5rem; color: var(--muted-text);">Below are the exact elements used in the live example above, paired with their official code roles:</p>
+
+            <!-- TAG ROW -->
+            <div class="tag-card">
+                <div class="tag-header">&lt;article&gt;</div>
+                <div class="tag-description">Wraps the complete, self-contained article composition context so engines can read it independently.</div>
             </div>
 
-            <p>JavaScript can be safely appended directly to the base of the layout document structure to execute interface transformations flawlessly without shifting layout parameters during execution cycles.</p>
-        </div>
+            <!-- TAG ROW -->
+            <div class="tag-card">
+                <div class="tag-header">&lt;header&gt; &lt;span&gt;</div>
+                <div class="tag-description"><strong>&lt;header&gt;</strong> holds the initial titles and dates. <strong>&lt;span&gt;</strong> marks up small content slices like the blue "Technology" text.</div>
+            </div>
 
-        <!-- Interactive Component -->
-        <div class="interaction-box">
-            <span>Did you find this helpful?</span>
-            <button class="like-btn" id="likeBtn">❤️ Like (<span id="likeCount">12</span>)</button>
-        </div>
-    </article>
-
-    <!-- JavaScript Interactivity -->
-    <script>
-        document.getElementById('likeBtn').addEventListener('click', function() {
-            const countElement = document.getElementById('likeCount');
-            let currentLikes = parseInt(countElement.innerText);
-            
-            // Toggle logic simulation
-            if(this.classList.contains('liked')) {
-                currentLikes--;
-                this.classList.remove('liked');
-                this.style.background = '#2563eb';
-            } else {
-                currentLikes++;
-                this.classList.add('liked');
-                this.style.background = '#059669'; // Green success color
-            }
-            
-            countElement.innerText = currentLikes;
-        });
-    </script>
-
-</body>
-</html>
+            <!-- TAG ROW -->
+            <div class="tag-card">
+                <div class="tag-header">&lt;h1&gt; &amp; &lt;h2&gt;</div>
