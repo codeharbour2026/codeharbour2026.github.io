@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Article Layout</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --bg-color: #f9f9fb;
+            --text-color: #1a1a1a;
+            --accent-color: #2563eb;
+            --card-bg: #ffffff;
+            --muted-text: #6b7280;
+        }
+
+        /* TYPOGRAPHY & BASE STYLES */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        /* ARTICLE CONTAINER */
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        /* HEADER & METADATA */
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 1.5rem;
+        }
+        .category {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            letter-spacing: 0.05em;
+        }
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin: 0.5rem 0 1rem 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .meta-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+        .author-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* MAIN CONTENT STYLES */
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        .article-body h2 {
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem 0;
+            font-weight: 700;
+        }
+        
+        /* PULL QUOTE */
+        .pull-quote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: #374151;
+        }
+
+        /* INTERACTIVE WIDGET (JAVASCRIPT DEPENDENT) */
+        .interaction-box {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #f3f4f6;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .like-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .like-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 640px) {
+            body { padding: 1rem 0.5rem; }
+            .article-container { padding: 2rem 1.25rem; border-radius: 0; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <article class="article-container">
+        <!-- Article Header -->
+        <header>
+            <span class="category">Technology</span>
+            <h1>The Future of Web Development in a Single Page Layout</h1>
+            
+            <div class="meta-info">
+                <div class="author-img"></div>
+                <div>
+                    <strong>Alex Mercer</strong>
+                    <div style="font-size: 0.8rem;">Published Aug 5, 2026 • 5 min read</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <div class="article-body">
+            <p>Writing clean, semantic HTML paired with modern CSS layout tools like Flexbox and Grid allows developers to achieve elegant presentation structures without massive frameworks.</p>
+            
+            <h2>Streamlining Content Delivery</h2>
+            <p>By blending structure, presentation, and small scales of dynamic interactivity directly into a solitary document, we drastically reduce round-trip server requests and enhance overall core web vitals performance markers.</p>
+            
+            <div class="pull-quote">
+                "Simplicity is the ultimate sophistication. When you minimize external assets, you maximize speed and accessibility."
+            </div>
+
+            <p>JavaScript can be safely appended directly to the base of the layout document structure to execute interface transformations flawlessly without shifting layout parameters during execution cycles.</p>
+        </div>
+
+        <!-- Interactive Component -->
+        <div class="interaction-box">
+            <span>Did you find this helpful?</span>
+            <button class="like-btn" id="likeBtn">❤️ Like (<span id="likeCount">12</span>)</button>
+        </div>
+    </article>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        document.getElementById('likeBtn').addEventListener('click', function() {
+            const countElement = document.getElementById('likeCount');
+            let currentLikes = parseInt(countElement.innerText);
+            
+            // Toggle logic simulation
+            if(this.classList.contains('liked')) {
+                currentLikes--;
+                this.classList.remove('liked');
+                this.style.background = '#2563eb';
+            } else {
+                currentLikes++;
+                this.classList.add('liked');
+                this.style.background = '#059669'; // Green success color
+            }
+            
+            countElement.innerText = currentLikes;
+        });
+    </script>
+
+</body>
+</html>
