@@ -1,98 +1,23 @@
 ```html
-<header class="top-banner">
-    <div class="container">
-        <span>A Fictional Government Website – Year 6 Fake News Project</span>
-    </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department of Future Education</title>
 
-<header class="main-header">
-    <div class="container">
-        <div class="logo">
-            <h1>NSW Department of Future Education</h1>
-            <p>Fictional Demonstration Website</p>
-        </div>
-
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">News</a>
-            <a href="#">Schools</a>
-            <a href="#">Technology</a>
-            <a href="#">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="container">
-        <span class="tag">NEWS RELEASE</span>
-        <h2>SmartMark AI to Mark Homework Across Australia</h2>
-        <p>Published 1 April 2028</p>
-    </div>
-</section>
-
-<main class="container">
-    <article class="article-card">
-        <h3>Major Education Technology Announcement</h3>
-
-        <p>
-            The Department of Future Education today announced the
-            launch of SmartMark AI, an artificial intelligence system
-            designed to provide homework feedback within seconds.
-        </p>
-
-        <blockquote>
-            "Students can now receive feedback before they even finish
-            writing their assignment."
-            <br>
-            — Minister for Imaginary Learning
-        </blockquote>
-
-        <h4>Reported Benefits</h4>
-
-        <ul>
-            <li>Marks homework in under 2 seconds</li>
-            <li>Provides feedback in 147 languages</li>
-            <li>Predicts grades with 101% accuracy</li>
-            <li>Detects unfinished homework from 5km away</li>
-        </ul>
-    </article>
-
-    <section class="related">
-        <h3>Latest News</h3>
-
-        <div class="news-grid">
-            <div class="card">
-                <h4>Robot Teachers Arrive in NSW</h4>
-            </div>
-
-            <div class="card">
-                <h4>AI School Bells Start Conversations</h4>
-            </div>
-
-            <div class="card">
-                <h4>Homework Completed Before Assignment Released</h4>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container">
-        <strong>Educational Demonstration Website</strong>
-        <p>
-            All information on this website is fictional and created
-            for a school project about misinformation and fake news.
-        </p>
-    </div>
-</footer>
-```
-
-```css
-body{
+<style>
+*{
     margin:0;
-    font-family:Arial, sans-serif;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
     background:#f5f7fa;
     color:#222;
+    line-height:1.6;
 }
 
 .container{
@@ -101,78 +26,368 @@ body{
     margin:auto;
 }
 
-.top-banner{
-    background:#ffd400;
-    padding:12px;
+.warning-banner{
+    background:#ffcc00;
+    color:#000;
     text-align:center;
+    padding:15px;
     font-weight:bold;
+    font-size:18px;
 }
 
-.main-header{
+.top-header{
     background:#002664;
     color:white;
-    padding:20px 0;
+    padding:12px 0;
 }
 
-.main-header .container{
+.top-header .container{
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
+.gov-label{
+    font-size:14px;
+}
+
+.main-header{
+    background:white;
+    padding:25px 0;
+    border-bottom:4px solid #002664;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box{
+    width:60px;
+    height:60px;
+    background:#002664;
+    border-radius:8px;
+}
+
+.logo-text h1{
+    color:#002664;
+    font-size:32px;
+}
+
+.logo-text p{
+    color:#666;
+}
+
+nav{
+    margin-top:20px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
 nav a{
-    color:white;
     text-decoration:none;
-    margin-left:20px;
+    color:#002664;
     font-weight:bold;
 }
 
 .hero{
     background:white;
-    padding:50px 0;
-    border-bottom:4px solid #002664;
+    padding:60px 0;
 }
 
-.tag{
-    color:#0057b8;
+.hero-tag{
+    color:#0066cc;
     font-weight:bold;
+    margin-bottom:10px;
 }
 
 .hero h2{
-    font-size:42px;
-    margin:10px 0;
+    font-size:48px;
+    color:#002664;
+    margin-bottom:15px;
 }
 
-.article-card{
+.hero p{
+    color:#555;
+}
+
+.content{
+    padding:40px 0;
+}
+
+.article{
     background:white;
-    margin:30px 0;
-    padding:30px;
-    border-radius:10px;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.article h3{
+    color:#002664;
+    margin-bottom:15px;
+}
+
+.article p{
+    margin-bottom:15px;
 }
 
 blockquote{
-    border-left:4px solid #0057b8;
-    padding-left:15px;
-    color:#444;
+    background:#eef5ff;
+    border-left:5px solid #0066cc;
+    padding:20px;
+    margin:20px 0;
+    font-style:italic;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin:40px 0;
+}
+
+.stat-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.stat-card h3{
+    color:#0066cc;
+    font-size:36px;
+}
+
+.related-news{
+    margin-top:50px;
+}
+
+.related-news h2{
+    color:#002664;
+    margin-bottom:20px;
 }
 
 .news-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
-.card{
+.news-card{
     background:white;
     padding:20px;
-    border-radius:10px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.news-card h4{
+    color:#002664;
+    margin-bottom:10px;
 }
 
 footer{
     background:#002664;
     color:white;
     text-align:center;
-    padding:30px;
-    margin-top:40px;
+    padding:40px 20px;
+    margin-top:60px;
 }
+
+.footer-warning{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.hero h2{
+    font-size:34px;
+}
+
+.top-header .container{
+    flex-direction:column;
+    gap:10px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="warning-banner">
+⚠️ FICTIONAL WEBSITE CREATED FOR A YEAR 6 FAKE NEWS PROJECT ⚠️
+ALL INFORMATION ON THIS PAGE IS MADE UP FOR EDUCATIONAL PURPOSES.
+</div>
+
+<header class="top-header">
+<div class="container">
+<div class="gov-label">A Fictional Government Website</div>
+<div>Department of Future Education</div>
+</div>
+</header>
+
+<header class="main-header">
+<div class="container">
+
+<div class="logo">
+<div class="logo-box"></div>
+
+<div class="logo-text">
+<h1>Department of Future Education</h1>
+<p>Building Tomorrow's Schools Today</p>
+</div>
+</div>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Schools</a></li>
+<li><a href="#">Technology</a></li>
+<li><a href="#">Students</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="hero-tag">NEWS RELEASE</div>
+
+<h2>SmartMark AI To Be Installed In Every Australian School By 2028</h2>
+
+<p>Published: 1 April 2028</p>
+
+</div>
+</section>
+
+<section class="content">
+<div class="container">
+
+<div class="article">
+
+<h3>Major Education Technology Announcement</h3>
+
+<p>
+The Department of Future Education today announced the nationwide rollout
+of SmartMark AI, a revolutionary artificial intelligence system designed
+to mark homework and provide instant feedback to students.
+</p>
+
+<p>
+Following successful trials in fictional pilot schools across Australia,
+officials claim SmartMark AI will transform learning and reduce teacher
+workloads dramatically.
+</p>
+
+<blockquote>
+"SmartMark AI represents the future of education. Students can now receive
+feedback before they have even finished writing their assignment."
+
+<br><br>
+
+— Minister for Imaginary Learning
+</blockquote>
+
+<h3>Reported Benefits</h3>
+
+<ul>
+<li>Marks homework in under 2 seconds</li>
+<li>Provides feedback in 147 languages</li>
+<li>Predicts grades with 101% accuracy</li>
+<li>Detects unfinished homework from 5 kilometres away</li>
+<li>Can recommend assignments before teachers create them</li>
+</ul>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-card">
+<h3>300%</h3>
+<p>Increase in Homework Completion</p>
+</div>
+
+<div class="stat-card">
+<h3>500%</h3>
+<p>Increase in Teacher Free Time</p>
+</div>
+
+<div class="stat-card">
+<h3>250%</h3>
+<p>Improvement in Student Focus</p>
+</div>
+
+<div class="stat-card">
+<h3>101%</h3>
+<p>Prediction Accuracy</p>
+</div>
+
+</div>
+
+<div class="related-news">
+
+<h2>Latest Education News</h2>
+
+<div class="news-grid">
+
+<div class="news-card">
+<h4>Robot Teachers Arrive In NSW Classrooms</h4>
+<p>
+Schools begin testing fully autonomous robot teachers capable of
+teaching 17 subjects simultaneously.
+</p>
+</div>
+
+<div class="news-card">
+<h4>AI School Bells Start Conversations</h4>
+<p>
+New AI-powered bells can greet students and remind them about
+upcoming assignments.
+</p>
+</div>
+
+<div class="news-card">
+<h4>Homework Completed Before Release</h4>
+<p>
+Students report receiving feedback on assignments before teachers
+have created them.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+
+<h3>Educational Demonstration Website</h3>
+
+<p>
+This website was created as part of a classroom activity about
+misinformation and fake news.
+</p>
+
+<p class="footer-warning">
+All stories, statistics, organisations and quotes on this website are fictional.
+</p>
+
+</footer>
+
+</body>
+</html>
 ```
