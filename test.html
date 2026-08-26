@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Behind on AI? That Changes Now</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+        }
+
+        .light-mode {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --accent-color: #0284c7;
+            --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--text-muted);
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .author {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        blockquote {
+            background: var(--card-bg);
+            border-left: 5px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-color);
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: normal;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .company-card {
+            background: var(--bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .company-card strong {
+            display: block;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .company-card span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="themeToggle">Light/Dark</button>
+            <h1>Are you behind on the subject of AI?</h1>
+            <p class="author">Well that changes now &bull; Written by Zayd N</p>
+        </header>
+
+        <blockquote>
+            "The development of full artificial intelligence could spell the end of the human race... It would take off on its own, and re-design itself at an ever increasing rate. Humans, who are limited by slow biological evolution, couldn't compete, and would be superseded."
+            <cite>&mdash; Stephen Hawking</cite>
+        </blockquote>
+
+        <section>
+            <h2>Introduction</h2>
+            <p>AI is a machine learning tool that can assist in many different ways from helping with homework, predicting weather, and even translating entire conversations. But how? How does it work so efficiently? How does it get its information? What else can it do? This article will explain all that and much more.</p>
+        </section>
+
+        <section>
+            <h2>Humble Beginnings</h2>
+            <p>AI was first conceptualized by Alan Turing in his 1950 landmark paper <em>Computing Machinery and Intelligence</em>, where he posed the famous question "Can machines think?" He also invented the Turing test.</p>
+            <p>The Turing Test is a method to see if a machine can think like a person. A human judge talks using text to a person and a machine in separate rooms. If the judge cannot tell which one is the machine, the machine passes the test. This is considered the beginning of AI as we know it.</p>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <p>AI works by first collecting data from various sources in the form of text, audio, video, and more. It then sorts the data into what can be read by an algorithm and what cannot.</p>
+            <p>Once data is gathered, the next step is for the AI to decide what to do with the data. The AI sorts and deciphers the data using patterns it has been programmed to learn until it recognizes similar patterns in the data that is being filtered into the system.</p>
+            <p>After gathering and sorting the information, the AI uses complex neural networks to analyze the filtered inputs and generate accurate predictions or responses based on those learned patterns.</p>
+        </section>
+
+        <section>
+            <h2>Where It Lives</h2>
+            <p>All the info the AI stores is kept and run in huge data centres across the globe.</p>
+        </section>
+
+        <section>
+            <h2>Who Creates AI?</h2>
+            <p>Who creates, runs, and maintains AI? Here is a list of some of the top and most well-known AI companies and bots:</p>
+            <div class="companies-grid">
+                <div class="company-card"><strong>ChatGPT</strong><span>OpenAI</span></div>
+                <div class="company-card"><strong>Claude</strong><span>Anthropic</span></div>
+                <div class="company-card"><strong>Gemini</strong><span>Google</span></div>
+                <div class="company-card"><strong>Grok</strong><span>xAI</span></div>
+                <div class="company-card"><strong>Copilot</strong><span>Microsoft</span></div>
+                <div class="company-card"><strong>DeepSeek</strong><span>DeepSeek</span></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Moving Forward</h2>
+            <p>As AI continues to evolve, we have seen many new uses of this technology from assisting with surgeries, to driving your car, to even automating business phone calls.</p>
+            <p>This powerful technology is also all around your home like in a smart speaker, a phone, or even a TV.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 &bull; Article by Zayd N</p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('themeToggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    </script>
+</body>
+</html>
