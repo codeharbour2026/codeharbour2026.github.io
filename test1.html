@@ -1,20 +1,231 @@
-const themeToggle = document.getElementById('theme-toggle');
-const htmlElement = document.documentElement;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMark AI Set To Transform Australian Schools</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
 
-// Check for saved user preference
-const savedTheme = localStorage.getItem('theme') || 'light';
-htmlElement.setAttribute('data-theme', savedTheme);
-updateToggleIcon(savedTheme);
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = htmlElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateToggleIcon(newTheme);
-});
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
 
-function updateToggleIcon(theme) {
-    themeToggle.textContent = theme === 'light' ? '🌙' : '☀️';
-}
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 800px;
+            margin: -2rem auto 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-item {
+            background: #f1f5f9;
+            padding: 1.25rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .quote {
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #334155;
+        }
+
+        .simulator {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .simulator input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            box-sizing: border-box;
+        }
+
+        .simulator button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .simulator button:hover {
+            background: var(--primary-dark);
+        }
+
+        #simResult {
+            margin-top: 1rem;
+            font-weight: 500;
+            color: #1e3a8a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SmartMark AI Set To Transform Australian Schools</h1>
+        <p>Written By Zayd N</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <p>Technology is changing education faster than ever before. A new artificial intelligence system called SmartMark AI could soon be introduced into schools across Australia. According to reports, the system can mark homework in seconds and provide instant feedback to students. Education officials say the technology could save teachers hours of work each week and help students improve their learning.</p>
+        </div>
+
+        <div class="card">
+            <h2>What Is SmartMark AI?</h2>
+            <p>SmartMark AI is a new computer program designed to automatically mark school assignments. Developers claim it can analyse student work, identify mistakes, and provide detailed feedback almost instantly. The system is said to support over 100 languages and work across subjects such as English, Mathematics, Science and History.</p>
+        </div>
+
+        <div class="card">
+            <h2>Trial Results</h2>
+            <p>Early trials reportedly took place in several schools around Australia. Officials claim students received faster feedback and teachers spent less time marking assignments.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">23%</div>
+                    <div class="stat-label">Homework Completion</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">10 Hours</div>
+                    <div class="stat-label">Teacher Time Saved Per Week</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">89%</div>
+                    <div class="stat-label">Student Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">&lt; 5 Sec</div>
+                    <div class="stat-label">Feedback Delivery Time</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>What Officials Are Saying</h2>
+            <p>Dr Sarah Mitchell, head of the SmartMark project, believes the technology could have a major impact on classrooms.</p>
+            <div class="quote">
+                "SmartMark AI has the potential to change the way students learn and teachers work. By providing instant feedback, students can improve their understanding much more quickly."
+            </div>
+            <p>Education leaders are reportedly considering a larger rollout over the next few years if future trials are successful.</p>
+        </div>
+
+        <div class="card">
+            <h2>Looking Ahead</h2>
+            <p>Some experts believe AI could become a common tool in classrooms. Supporters argue it can reduce teacher workloads and provide faster feedback for students. Others believe teachers should remain responsible for assessing student work. If SmartMark AI proves successful, it could become one of the biggest changes to Australian education in decades.</p>
+            
+            <!-- Interactive JavaScript Demo Component -->
+            <div class="simulator">
+                <h3>Try SmartMark AI Simulator</h3>
+                <p>Type a short sentence or answer to test simulated instant marking:</p>
+                <input type="text" id="userInput" placeholder="e.g., The capital of Australia is Canberra.">
+                <button onclick="simulateMarking()">Run SmartMark</button>
+                <div id="simResult"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartMark AI Report. All text content preserved as requested.</p>
+    </footer>
+
+    <script>
+        function simulateMarking() {
+            const input = document.getElementById('userInput').value.trim();
+            const resultDiv = document.getElementById('simResult');
+            
+            if (!input) {
+                resultDiv.innerHTML = "⚠️ Please enter some text to analyze.";
+                return;
+            }
+            
+            resultDiv.innerHTML = "Analyzing in 2 seconds...";
+            setTimeout(() => {
+                resultDiv.innerHTML = `✅ Checked in 1.4 seconds. Feedback: Clear structure, good grammar detected. Keep up the great work!`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
