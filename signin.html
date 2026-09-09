@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in | TechIndustries</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">TI</span>
+            <span class="brand-name">TechIndustries<span>Tech support &amp; web solutions</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+            <a class="btn-nav" href="signin.html" aria-current="page">Sign in</a>
+            <a class="btn-nav filled" href="signup.html">Sign up</a>
+        </div>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Sign in</h1>
+        <p>Access your TechIndustries account.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <form id="signinForm" class="intake" style="max-width:420px;" novalidate>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="username">
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+            </div>
+            <button type="submit">Sign in</button>
+            <div class="form-status err" id="signinError" role="alert">Sign-in failed — check your email and password.</div>
+        </form>
+        <p style="margin-top:24px; font-size:.9rem; color:var(--ink-soft);">
+            No account yet? <a href="signup.html" style="color:var(--teal); font-weight:600;">Sign up</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>TechIndustries</strong> — tech support &amp; web solutions</div>
+        <div>© 2026 TechIndustries. All rights reserved. · Powered by Codeharbour · <a href="login.html" style="color:#5a6377;">Admin</a></div>
+    </div>
+</footer>
+
+<script src="supabase-config.js"></script>
+<script type="module" src="signin.js"></script>
+</body>
+</html>

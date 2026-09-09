@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | TechIndustries</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">TI</span>
+            <span class="brand-name">TechIndustries<span>Tech support &amp; web solutions</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" aria-current="page">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+            <a class="btn-nav" href="signin.html">Sign in</a>
+            <a class="btn-nav filled" href="signup.html">Sign up</a>
+        </div>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Services</h1>
+        <p>Every price below is a starting point. Open a service to configure it and see a live estimate.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="ticket-grid" id="widgetGrid">
+            <!-- Cards are generated from widgets.js — see that file to add or remove a service -->
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>TechIndustries</strong> — tech support &amp; web solutions</div>
+        <div>© 2026 TechIndustries. All rights reserved. · Powered by Codeharbour · <a href="login.html" style="color:#5a6377;">Admin</a></div>
+    </div>
+</footer>
+
+<script src="widgets.js"></script>
+<script src="script.js"></script>
+<script src="services-render.js"></script>
+<script src="supabase-config.js"></script>
+<script type="module" src="auth-nav.js"></script>
+</body>
+</html>

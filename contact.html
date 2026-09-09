@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | TechIndustries</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">TI</span>
+            <span class="brand-name">TechIndustries<span>Tech support &amp; web solutions</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+            <a class="btn-nav" href="signin.html">Sign in</a>
+            <a class="btn-nav filled" href="signup.html">Sign up</a>
+        </div>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Get in touch</h1>
+        <p>General questions, or anything that doesn't fit neatly into one service — start here instead of the quote builder.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <form id="contactForm" class="intake" novalidate>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="service">What's this about?</label>
+                <select id="service" name="service">
+                    <option>Tech Support</option>
+                    <option>Website Design</option>
+                    <option>Website Maintenance</option>
+                    <option>Cybersecurity &amp; Data Protection</option>
+                    <option>Cloud &amp; Backup Solutions</option>
+                    <option>App Development</option>
+                    <option>Not sure yet</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="details">Tell us about it</label>
+                <textarea id="details" name="details" placeholder="What's broken, or what you want built"></textarea>
+            </div>
+            <button type="submit">Send enquiry</button>
+            <p class="form-note">No spam, no mailing list — this goes straight to the person doing the work.</p>
+            <div class="form-status ok" id="formStatus" role="status">Thanks — your enquiry is in. We'll get back to you within one business day.</div>
+        </form>
+
+        <div class="contact-strip">
+            <div>
+                <h3>Email</h3>
+                <p>hello@techindustries.example</p>
+            </div>
+            <div>
+                <h3>Response time</h3>
+                <p>Within one business day</p>
+            </div>
+            <div>
+                <h3>Based in</h3>
+                <p>Sydney, NSW — remote support Australia-wide</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>TechIndustries</strong> — tech support &amp; web solutions</div>
+        <div>© 2026 TechIndustries. All rights reserved. · Powered by Codeharbour · <a href="login.html" style="color:#5a6377;">Admin</a></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="supabase-config.js"></script>
+<script type="module" src="enquiry-form.js"></script>
+<script type="module" src="auth-nav.js"></script>
+</body>
+</html>

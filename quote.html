@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a quote | TechIndustries</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">TI</span>
+            <span class="brand-name">TechIndustries<span>Tech support &amp; web solutions</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" aria-current="page">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+            <a class="btn-nav" href="signin.html">Sign in</a>
+            <a class="btn-nav filled" href="signup.html">Sign up</a>
+        </div>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Build your quote</h1>
+        <p>Tick what you need — the price updates as you go.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container" id="quoteMount">
+        <!-- Built by quote-render.js from widgets.js + ?service=<id> -->
+    </div>
+</section>
+
+<section class="section section-tight" style="background:var(--paper-raised); border-top:1px solid var(--line);" id="requestForm">
+    <div class="container">
+        <div class="section-head">
+            <h2 style="font-size:1.6rem;">Request this quote</h2>
+            <p>Send it through and we'll confirm the final price within one business day.</p>
+        </div>
+        <form id="contactForm" class="intake" novalidate>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                    <option>Tech Support</option>
+                    <option>Website Design</option>
+                    <option>Website Maintenance</option>
+                    <option>Cybersecurity &amp; Data Protection</option>
+                    <option>Cloud &amp; Backup Solutions</option>
+                    <option>App Development</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="details">Anything else we should know?</label>
+                <textarea id="details" name="details" placeholder="Timeline, extra detail, questions"></textarea>
+            </div>
+            <button type="submit">Send enquiry</button>
+            <p class="form-note">No spam, no mailing list — this goes straight to the person doing the work.</p>
+            <div class="form-status ok" id="formStatus" role="status">Thanks — your enquiry is in. We'll get back to you within one business day.</div>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>TechIndustries</strong> — tech support &amp; web solutions</div>
+        <div>© 2026 TechIndustries. All rights reserved. · Powered by Codeharbour · <a href="login.html" style="color:#5a6377;">Admin</a></div>
+    </div>
+</footer>
+
+<script src="widgets.js"></script>
+<script src="script.js"></script>
+<script src="quote-render.js"></script>
+<script src="supabase-config.js"></script>
+<script type="module" src="enquiry-form.js"></script>
+<script type="module" src="auth-nav.js"></script>
+</body>
+</html>
