@@ -11,95 +11,133 @@
 
 const WIDGETS = [
     {
-        id: "tech-support",
-        code: "TS",
-        name: "Tech Support",
-        blurb: "Hands-on help for the devices you rely on every day.",
-        basePrice: 20,
-        priceUnit: "starting / callout",
-        configurable: false,
-        bullets: [
-            "Setup for laptops, phones & printers",
-            "Troubleshooting slow or crashing devices",
-            "Software installs & updates",
-            "Home Wi-Fi & network fixes"
-        ]
-    },
-    {
-        id: "web-design",
-        code: "WD",
-        name: "Website Design",
-        blurb: "A site built around what your visitors actually need to do.",
+        id: "website-creation",
+        code: "WC",
+        name: "Website Creation",
+        blurb: "A modern website built for your business, project or organisation.",
         basePrice: 150,
         priceUnit: "starting",
         configurable: true,
         features: [
-            { id: "multi-page", label: "Multiple pages (up to 5)", price: 100 },
-            { id: "database", label: "Database included (accounts, listings, etc.)", price: 150 },
-            { id: "ecommerce", label: "Online store / payments", price: 200 },
-            { id: "booking", label: "Booking or appointment system", price: 80 },
-            { id: "seo", label: "Search engine (SEO) setup", price: 60 },
-            { id: "copywriting", label: "Content written for you", price: 70 }
+            { id: "extra-pages", label: "Extra pages (up to 5 total)", price: 50 },
+            { id: "contact-form", label: "Contact form", price: 30 },
+            { id: "gallery", label: "Photo gallery", price: 25 },
+            { id: "mobile", label: "Mobile optimisation", price: 20 },
+            { id: "custom-design", label: "Custom design & branding", price: 60 },
+            { id: "blog", label: "News or blog section", price: 40 }
         ]
     },
     {
-        id: "maintenance",
+        id: "business-website",
+        code: "BW",
+        name: "Business Website",
+        blurb: "A professional website designed to showcase your business.",
+        basePrice: 250,
+        priceUnit: "starting",
+        configurable: true,
+        features: [
+            { id: "team-page", label: "Team or staff page", price: 30 },
+            { id: "testimonials", label: "Customer testimonials section", price: 25 },
+            { id: "google-maps", label: "Google Maps integration", price: 20 },
+            { id: "quote-form", label: "Quote request form", price: 40 },
+            { id: "seo-setup", label: "Basic SEO setup", price: 50 },
+            { id: "analytics", label: "Website analytics setup", price: 25 }
+        ]
+    },
+    {
+        id: "online-store",
+        code: "OS",
+        name: "Online Store",
+        blurb: "Sell products online with a simple, easy-to-manage store.",
+        basePrice: 350,
+        priceUnit: "starting",
+        configurable: true,
+        features: [
+            { id: "payments", label: "Payment gateway setup", price: 75 },
+            { id: "extra-products", label: "Additional product setup", price: 40 },
+            { id: "discount-codes", label: "Discount & coupon system", price: 30 },
+            { id: "accounts", label: "Customer accounts", price: 50 },
+            { id: "inventory", label: "Inventory tracking", price: 50 },
+            { id: "shipping", label: "Shipping configuration", price: 40 }
+        ]
+    },
+    {
+        id: "website-maintenance",
         code: "WM",
         name: "Website Maintenance",
-        blurb: "Keep an existing site current, secure and fast.",
-        basePrice: 40,
+        blurb: "Keep your website updated and running smoothly.",
+        basePrice: 30,
         priceUnit: "starting / month",
-        configurable: false,
-        bullets: [
-            "Security & software updates",
-            "Content and image changes",
-            "Uptime checks & backups",
-            "Fast turnaround on issues"
+        configurable: true,
+        features: [
+            { id: "content-updates", label: "Monthly content updates", price: 15 },
+            { id: "priority-support", label: "Priority support", price: 20 },
+            { id: "backups", label: "Regular backups", price: 10 },
+            { id: "monitoring", label: "Website monitoring", price: 10 },
+            { id: "reports", label: "Monthly performance report", price: 10 }
         ]
     },
     {
-        id: "cybersecurity",
-        code: "CS",
-        name: "Cybersecurity & Data Protection",
-        blurb: "Lock down accounts, devices and home or office networks.",
+        id: "hosting-setup",
+        code: "HS",
+        name: "Website Hosting Setup",
+        blurb: "Get your website online with hosting and domain configuration.",
+        basePrice: 40,
+        priceUnit: "starting",
+        configurable: true,
+        features: [
+            { id: "domain", label: "Domain connection", price: 15 },
+            { id: "ssl", label: "SSL certificate setup", price: 15 },
+            { id: "migration", label: "Website migration", price: 30 },
+            { id: "email", label: "Business email setup", price: 25 }
+        ]
+    },
+    {
+        id: "contact-systems",
+        code: "CF",
+        name: "Contact & Enquiry Systems",
+        blurb: "Allow customers to contact you and manage enquiries.",
+        basePrice: 40,
+        priceUnit: "starting",
+        configurable: true,
+        features: [
+            { id: "email-alerts", label: "Email notifications", price: 10 },
+            { id: "dashboard", label: "Enquiry dashboard", price: 40 },
+            { id: "database", label: "Database storage", price: 30 },
+            { id: "spam-protection", label: "Spam protection", price: 15 },
+            { id: "attachments", label: "File upload support", price: 20 }
+        ]
+    },
+    {
+        id: "tech-support",
+        code: "TS",
+        name: "Tech Support",
+        blurb: "Help with common technology problems at home or for small businesses.",
+        basePrice: 20,
+        priceUnit: "starting / session",
+        configurable: true,
+        features: [
+            { id: "printer", label: "Printer setup", price: 10 },
+            { id: "wifi", label: "Wi-Fi troubleshooting", price: 15 },
+            { id: "software", label: "Software installation", price: 10 },
+            { id: "device-setup", label: "New device setup", price: 15 },
+            { id: "data-transfer", label: "Data transfer", price: 20 }
+        ]
+    },
+    {
+        id: "school-community",
+        code: "SC",
+        name: "School & Community Websites",
+        blurb: "Affordable websites for clubs, teams and community groups.",
         basePrice: 120,
         priceUnit: "starting",
         configurable: true,
         features: [
-            { id: "audit", label: "Full network security audit", price: 90 },
-            { id: "antivirus", label: "Antivirus & firewall setup (per device)", price: 25 },
-            { id: "password-mgr", label: "Password manager setup for your team", price: 40 },
-            { id: "backup-encrypt", label: "Encrypted backup setup", price: 60 }
-        ]
-    },
-    {
-        id: "cloud-backup",
-        code: "CB",
-        name: "Cloud & Backup Solutions",
-        blurb: "Store, sync and back up your files without losing sleep.",
-        basePrice: 60,
-        priceUnit: "starting / month",
-        configurable: false,
-        bullets: [
-            "Automated daily backups",
-            "Cloud storage setup & sync",
-            "File recovery when things go wrong",
-            "Storage sized to what you actually need"
-        ]
-    },
-    {
-        id: "app-development",
-        code: "AD",
-        name: "App Development",
-        blurb: "Custom software or a mobile app built for your workflow.",
-        basePrice: 500,
-        priceUnit: "starting",
-        configurable: true,
-        features: [
-            { id: "ios", label: "iOS app", price: 300 },
-            { id: "android", label: "Android app", price: 300 },
-            { id: "backend", label: "Backend & database", price: 250 },
-            { id: "push", label: "Push notifications", price: 80 }
+            { id: "calendar", label: "Event calendar", price: 25 },
+            { id: "gallery", label: "Photo gallery", price: 20 },
+            { id: "signup", label: "Member signup form", price: 30 },
+            { id: "newsletter", label: "Newsletter signup", price: 20 },
+            { id: "downloads", label: "Document downloads", price: 15 }
         ]
     }
 ];
