@@ -36,11 +36,15 @@ if (form) {
 
         const serviceField = document.getElementById("service");
 
+        const { data: sessionData } = await supabase.auth.getSession();
+        const userId = sessionData.session ? sessionData.session.user.id : null;
+
         const payload = {
             name: document.getElementById("name").value.trim(),
             email: document.getElementById("email").value.trim(),
             service: serviceField ? serviceField.value : null,
-            message: buildMessage().trim() || "(no details added)"
+            message: buildMessage().trim() || "(no details added)",
+            user_id: userId
         };
 
         const { error } = await supabase.from("enquiries").insert([payload]);

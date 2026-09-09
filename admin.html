@@ -16,6 +16,7 @@
         </a>
         <div class="nav-auth">
             <span id="whoami" style="color:#B9C2CE; font-size:.88rem;"></span>
+            <a class="btn-nav" href="#" id="unreadLink" style="display:none;">Unread <span class="nav-badge" id="unreadBadge">0</span></a>
             <button class="btn-nav" id="signOutBtn" type="button">Sign out</button>
         </div>
     </div>
@@ -23,13 +24,55 @@
 
 <section class="page-header">
     <div class="container">
-        <h1>Enquiries</h1>
-        <p>Newest first. Only visible to signed-in admins.</p>
+        <h1>Admin dashboard</h1>
+        <p>Orders, client messages and incoming enquiries — only visible to signed-in admins.</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
+        <h2 class="section-subhead">New order</h2>
+        <form class="inline-form" id="newOrderForm">
+            <div class="field">
+                <label for="clientEmail">Client email (must have an account)</label>
+                <input type="email" id="clientEmail" required>
+            </div>
+            <div class="field">
+                <label for="orderService">Service</label>
+                <input type="text" id="orderService" required>
+            </div>
+            <div class="field">
+                <label for="orderPrice">Price ($)</label>
+                <input type="number" id="orderPrice" min="0" step="1">
+            </div>
+            <div class="field">
+                <label for="orderNotes">Notes</label>
+                <input type="text" id="orderNotes">
+            </div>
+            <button type="submit">Create order</button>
+        </form>
+        <p class="form-status err" id="newOrderError" role="alert"></p>
+        <p class="form-status ok" id="newOrderStatus" role="status"></p>
+
+        <h2 class="section-subhead">Orders</h2>
+        <div class="ledger-wrap">
+            <table class="admin-orders-table">
+                <thead>
+                    <tr>
+                        <th>Client</th>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Opened</th>
+                        <th>Thread</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersBody"></tbody>
+            </table>
+            <p class="empty-state" id="ordersEmpty">No orders yet.</p>
+        </div>
+
+        <h2 class="section-subhead">Enquiries</h2>
         <div class="ledger-wrap">
             <table class="ledger-table">
                 <thead>
@@ -39,6 +82,7 @@
                         <th>Service</th>
                         <th>Message</th>
                         <th>Received</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="enquiriesBody"></tbody>

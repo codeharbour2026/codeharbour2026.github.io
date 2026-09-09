@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order thread | TechIndustries admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">TI</span>
+            <span class="brand-name">TechIndustries<span>Tech support &amp; web solutions</span></span>
+        </a>
+        <div class="nav-auth">
+            <span id="whoami" style="color:#B9C2CE; font-size:.88rem;"></span>
+            <button class="btn-nav" id="signOutBtn" type="button">Sign out</button>
+        </div>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <p style="margin-bottom:10px;"><a href="admin.html" style="color:#B9C2CE; font-size:.9rem;">← Back to dashboard</a></p>
+        <h1 id="orderTitle">Order</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="order-detail-head">
+            <select class="status-select" id="statusSelect">
+                <option value="pending">pending</option>
+                <option value="in_progress">in progress</option>
+                <option value="completed">completed</option>
+                <option value="cancelled">cancelled</option>
+            </select>
+            <span id="orderMeta" style="color:var(--ink-soft); font-size:.92rem;"></span>
+        </div>
+        <p id="orderNotes" style="margin-bottom:28px;"></p>
+
+        <h2 class="section-subhead" style="margin-top:0;">Messages</h2>
+        <div class="chat-wrap">
+            <div class="chat-messages" id="chatMessages"></div>
+            <form class="chat-form" id="chatForm">
+                <textarea id="chatInput" placeholder="Reply to this client…" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>TechIndustries</strong> — tech support &amp; web solutions</div>
+        <div>© 2026 TechIndustries. All rights reserved. · Powered by Codeharbour</div>
+    </div>
+</footer>
+
+<script src="supabase-config.js"></script>
+<script type="module" src="admin-order.js"></script>
+</body>
+</html>

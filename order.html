@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My account | TechIndustries</title>
+<title>Order | TechIndustries</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,33 +27,27 @@
 
 <section class="page-header">
     <div class="container">
-        <h1>My account</h1>
-        <p>Signed in as <span id="accountEmail">…</span></p>
+        <p style="margin-bottom:10px;"><a href="account.html" style="color:#B9C2CE; font-size:.9rem;">← Back to my account</a></p>
+        <h1 id="orderTitle">Order</h1>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
-        <div class="ticket" style="max-width:520px; border-left-color:var(--teal);">
-            <div class="ticket-ref">ACCOUNT</div>
-            <h2 style="font-size:1.2rem;">Your details</h2>
-            <ul style="border-top:1px dashed var(--line); margin-top:14px; padding-top:14px;">
-                <li>Email: <strong id="detailEmail">—</strong></li>
-                <li>Member since: <strong id="detailSince">—</strong></li>
-            </ul>
-            <button class="btn-nav filled" id="signOutBtn" type="button" style="margin-top:20px;">Sign out</button>
+        <div class="order-detail-head">
+            <span class="status-pill" id="orderStatus"></span>
+            <span id="orderMeta" style="color:var(--ink-soft); font-size:.92rem;"></span>
         </div>
-        <p style="margin-top:28px; max-width:60ch; color:var(--ink-soft);">
-            Looking for a quote or to raise an enquiry? Head to <a href="services.html" style="color:var(--teal); font-weight:600;">Services</a> — you don't need to be signed in to use the quote builder or contact form.
-        </p>
+        <p id="orderNotes" style="margin-bottom:28px;"></p>
 
-        <h2 class="section-subhead">Pending orders</h2>
-        <div id="pendingOrders"></div>
-        <p class="empty-note" id="pendingEmpty" style="display:none;">No pending orders right now.</p>
-
-        <h2 class="section-subhead">Order history</h2>
-        <div id="historyOrders"></div>
-        <p class="empty-note" id="historyEmpty" style="display:none;">Nothing here yet.</p>
+        <h2 class="section-subhead" style="margin-top:0;">Messages</h2>
+        <div class="chat-wrap">
+            <div class="chat-messages" id="chatMessages"></div>
+            <form class="chat-form" id="chatForm">
+                <textarea id="chatInput" placeholder="Write a message…" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </div>
 </section>
 
@@ -65,7 +59,7 @@
 </footer>
 
 <script src="supabase-config.js"></script>
-<script type="module" src="account.js"></script>
+<script type="module" src="order.js"></script>
 <script type="module" src="auth-nav.js"></script>
 </body>
 </html>
