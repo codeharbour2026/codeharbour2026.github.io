@@ -11,6 +11,6 @@
 // separate domains can't see each other's login session.
 
 window.SITE_LINKS = {
-    techindustries: "https://codeharbour2026.github.io/techindustries/",
-    tools: "https://codeharbour2026.github.io/codeharbour-tools/"
+    techindustries: "https://codeharbour2026.github.io/tech/",
+    tools: "https://codeharbour2026.github.io/tools/"
 };
