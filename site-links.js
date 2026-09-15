@@ -12,5 +12,6 @@
 
 window.SITE_LINKS = {
     techindustries: "https://codeharbour2026.github.io/tech/",
-    tools: "https://codeharbour2026.github.io/tools/"
+    tools: "https://codeharbour2026.github.io/tools/",
+    academy:"https://codeharbour2026.github.io/academy/"
 };
