@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My account | Codeharbour</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">CH</span>
+            <span class="brand-name">Codeharbour<span>One account, two products</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <div class="nav-auth" id="navAuth"></div>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1>My account</h1>
+        <p>Signed in as <span id="accountEmail">…</span></p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="ticket-grid">
+            <div class="ticket">
+                <div class="ticket-ref">CLIENT SITE</div>
+                <h3>TechIndustries</h3>
+                <p>Your quotes, orders and messages.</p>
+                <a id="techLink" href="#" style="margin-top:16px; display:block; text-align:center; background:var(--ink); color:#fff; padding:12px; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:.92rem;">Open TechIndustries</a>
+            </div>
+            <div class="ticket">
+                <div class="ticket-ref">FREE TOOLS</div>
+                <h3>CodeHarbour Tools</h3>
+                <p>Your favourite and recently used tools.</p>
+                <a id="toolsLink" href="#" style="margin-top:16px; display:block; text-align:center; background:var(--ink); color:#fff; padding:12px; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:.92rem;">Open CodeHarbour Tools</a>
+            </div>
+        </div>
+
+        <p style="margin-top:24px; max-width:60ch; color:var(--ink-soft); font-size:.92rem;">
+            If the site you open asks you to sign in again, use the same email and password — it's the same account.
+        </p>
+
+        <div style="margin-top:32px;">
+            <button class="btn-nav filled" id="signOutBtn" type="button">Sign out</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>Codeharbour</strong> — the account layer behind TechIndustries &amp; CodeHarbour Tools.</div>
+        <div>© 2026 Codeharbour.</div>
+    </div>
+</footer>
+
+<script src="supabase-config.js"></script>
+<script src="site-links.js"></script>
+<script type="module" src="account.js"></script>
+<script type="module" src="auth-nav.js"></script>
+</body>
+</html>

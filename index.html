@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codeharbour — your account</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">CH</span>
+            <span class="brand-name">Codeharbour<span>One account, two products</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+        </ul>
+        <div class="nav-auth" id="navAuth"></div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="blueprint-grid" aria-hidden="true"></div>
+    <div class="container">
+        <div class="hero-copy">
+            <p class="eyebrow-note">One login, everything we build</p>
+            <h1>One account for everything Codeharbour.</h1>
+            <p class="lede">Sign in once here, then jump straight into TechIndustries or CodeHarbour Tools — same account either way.</p>
+            <div class="hero-buttons" id="heroButtons">
+                <a href="signin.html" class="btn btn-primary">Sign in</a>
+                <a href="signup.html" class="btn btn-outline">Create account</a>
+            </div>
+        </div>
+        <div class="trace-wrap" aria-hidden="true">
+            <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg">
+                <path class="trace-line" d="M20 260 L20 180 L110 180 L110 100 L230 100 L230 40 L340 40" />
+                <circle class="trace-node n1" cx="110" cy="180" r="7"/>
+                <circle class="trace-node n2" cx="230" cy="100" r="7"/>
+                <circle class="trace-node n3" cx="340" cy="40" r="7"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-head">
+            <h2>Where to go</h2>
+            <p>Both of these are separate sites — this page is just the front door.</p>
+        </div>
+        <div class="ticket-grid">
+            <div class="ticket">
+                <div class="ticket-ref">CLIENT SITE</div>
+                <h3>TechIndustries</h3>
+                <p>IT support, web design and the other services we offer — get a quote, message us about an order, or check your dashboard.</p>
+                <a class="btn-quote" id="techLink" href="#" style="margin-top:16px; display:block; text-align:center; background:var(--ink); color:#fff; padding:12px; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:.92rem;">Open TechIndustries</a>
+            </div>
+            <div class="ticket">
+                <div class="ticket-ref">FREE TOOLS</div>
+                <h3>CodeHarbour Tools</h3>
+                <p>56 free browser-based trackers, planners and calculators for school, business and everyday life.</p>
+                <a class="btn-quote" id="toolsLink" href="#" style="margin-top:16px; display:block; text-align:center; background:var(--ink); color:#fff; padding:12px; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:.92rem;">Open CodeHarbour Tools</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>Codeharbour</strong> — the account layer behind TechIndustries &amp; CodeHarbour Tools.</div>
+        <div>© 2026 Codeharbour.</div>
+    </div>
+</footer>
+
+<script src="supabase-config.js"></script>
+<script src="site-links.js"></script>
+<script type="module" src="home.js"></script>
+<script type="module" src="auth-nav.js"></script>
+</body>
+</html>
